@@ -4,6 +4,7 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 @Path("/hello")
 public class GreetingResource {
@@ -16,8 +17,9 @@ public class GreetingResource {
 
     @GET
     @Path("/world")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String world() {
-        return "world from Quarkus REST";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response world() {
+        GreetingDto greeting = new GreetingDto("World!");
+        return Response.ok(greeting).build();
     }
 }
