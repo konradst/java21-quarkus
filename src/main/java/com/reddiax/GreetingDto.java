@@ -2,17 +2,17 @@ package com.reddiax;
 
 public class GreetingDto {
 
-    private String hello;
+    private String name;
 
-    public GreetingDto(String hello) {
-        this.hello = hello;
+    public GreetingDto(String name) {
+        this.name = name;
     }
 
-    public String getHello() {
-        return hello;
+    public String getName() {
+        return name;
     }
 
-    public void setHello(String hello) {
-        this.hello = hello;
+    public void setName(String name) {
+        this.name = name;
     }
 }
