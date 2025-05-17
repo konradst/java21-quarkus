@@ -18,7 +18,7 @@ public class GreetingResource {
     @GET
     @Path("/world")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response world() {
+    public Response helloWorld() {
         GreetingDto greeting = new GreetingDto("World!");
         return Response.ok(greeting).build();
     }
